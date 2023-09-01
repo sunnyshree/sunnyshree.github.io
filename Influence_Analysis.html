@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ex1 {
+  margin-left: 50px;
+}
+
+.ex2 {
+  margin-left: 71px;
+}
+
+p {
+  text-indent: 15px;
+}
+
+
+a:link, a:visited {
+  
+  color: blue;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1 class="ex2"><b><center><b>Influence Analysis</b></center></b></h1>
+
+
+<h3 class="ex2"><b> Retraining-Based Methods: </b></h3>
+<ol class="ex2">
+
+
+  <li>
+    <a href="https://arxiv.org/pdf/1703.04730.pdf">Understanding black-box predictions via influence functions.</a>
+    <p>Koh, Pang Wei, and Percy Liang.</p>
+    <p>International Conference on Machine Learning. PMLR, 2017.</p>
+  </li>
+  <li>
+    <a href="https://arxiv.org/abs/2202.00622">Datamodels: Predicting Predictions from Training Data</a>
+    <p>Andrew Ilyas, Sung Min Park, Logan Engstrom, Guillaume Leclerc, and Aleksander Madry.</p>
+    <p>ICML, 2022.</p>
+  </li>
+  <li>
+    <a href="https://arxiv.org/abs/2206.10013">Measuring the Effect of Training Data on Deep Learning Predictions via Randomized Experiments</a>
+    <p>Jinkun Lin, Anqi Zhang, Mathias Lecuyer, Jinyang Li, Aurojit Panda, and Siddhartha Sen.</p>
+    <p>ICML, 2022.</p>
+  </li>
+  <li>
+    <a href="https://arxiv.org/abs/2110.14049">Beta Shapley: A Unified and Noise-Reduced Data Valuation Framework for Machine Learning</a>
+    <p>Yongchan Kwon and James Zou.</p>
+    <p>AISTATS, 2022.</p>
+  </li>
+  <li>
+    <a href="https://arxiv.org/abs/2210.08723">Private Data Valuation and Fair Payment in Data Marketplaces</a>
+    <p>Zhihua Tian, Jian Liu, Jingyu Li, Xinle Cao, Ruoxi Jia, Jun Kong, Mengdi Liu, and Kui Ren.</p>
+    <p>2022.</p>
+  </li>
+  <li>
+    <a href="https://arxiv.org/abs/2112.12938">Counterfactual Memorization in Neural Language Models</a>
+    <p>Chiyuan Zhang, Daphne Ippolito, Katherine Lee, Matthew Jagielski, Florian Tramèr, and Nicholas Carlini.</p>
+    <p>2021.</p>
+  </li>
+  <li>
+    <a href="https://arxiv.org/abs/2002.03206">Characterizing Structural Regularities of Labeled Data in Overparameterized Models</a>
+    <p>Ziheng Jiang, Chiyuan Zhang, Kunal Talwar, and Michael C Mozer.</p>
+    <p>ICML, 2021.</p>
+  </li>
+  <li>
+    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/16721">If You Like Shapley Then You’ll Love the Core</a>
+    <p>Tom Yan and Ariel D. Procaccia.</p>
+    <p>AAAI, 2021.</p>
+    </li>
+  <li>
+    <a href="https://arxiv.org/abs/1911.07128">Scalability vs. Utility: Do We Have to Sacrifice One for the Other in Data Importance Quantification?</a>
+    <p>Ruoxi Jia, Fan Wu, Xuehui Sun, Jiacen Xu, David Dao, Bhavya Kailkhura, Ce Zhang, Bo Li, and Dawn Song.</p>
+    <p>CVPR, 2021.</p>
+     </li>
+	<li>
+	<a href="https://arxiv.org/abs/1902.05622">The Shapley Taylor Interaction Index</a>
+	<p>Kedar Dhamdhere, Ashish Agarwal, and Mukund Sundararajan.</p>
+	<p>ICML, 2020.</p>
+	</li>
+	<li>
+	<a href="https://arxiv.org/abs/2008.03703">What Neural Networks Memorize and Why: Discovering the Long Tail via Influence Estimation</a>
+	<p>Vitaly Feldman and Chiyuan Zhang.</p>
+	<p>NeurIPS, 2020.</p>
+	</li>
+	<li>
+	<a href="https://arxiv.org/abs/1909.11671">Data Valuation using Reinforcement Learning</a>
+	<p>Jinsung Yoon, Sercan Arik, and Tomas Pfister.</p>
+	<p>ICML, 2020.</p>
+	</li>
+	<li>
+	<a href="https://arxiv.org/abs/2002.12334">A Distributional Framework for Data Valuation</a>
+	<p>Amirata Ghorbani, Michael P. Kim, and James Zou.</p>
+	<p>ICML, 2020.</p>
+	</li>
+	<li>
+	<a href="https://arxiv.org/abs/1906.05271">Does Learning Require Memorization? A Short Tale about a Long Tail</a>
+	<p>Vitaly Feldman.</p>
+	<p>STOC, 2020.</p>
+	</li>
+	<li>
+		<a href="http://proceedings.mlr.press/v97/ghorbani19c.html">Data Shapley: Equitable Valuation of Data for Machine Learning</a>
+		<p>Amirata Ghorbani and James Zou.</p>
+		<p>ICML, 2019.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1902.10275">Towards Efficient Data Valuation Based on the Shapley Value</a>
+		<p>Ruoxi Jia, David Dao, Boxin Wang, Frances Ann Hubis, Nick Hynes, Nezihe Merve Gurel, Bo Li, Ce Zhang, Dawn Song, and Costas J. Spanos.</p>
+		<p>AISTATS, 2019.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1611.05923">"Influence Sketching": Finding Influential Samples in Large-Scale Regressions</a>
+		<p>Mike Wojnowicz, Ben Cruz, Xuan Zhao, Brian Wallace, Matt Wolff, Jay Luan, Caleb Crable.</p>
+		<p>BigData, 2016.</p>
+	</li>
+	<li>
+		<a href="http://www.library.fa.ru/files/roth2.pdf">The Shapley Value: Essays in Honor of Lloyd S. Shapley</a>
+		<p>Lloyd S. Shapley and Alvin E. Roth.</p>
+		<p>ISBN 052136177X. 1988.</p>
+		</li>
+	<li>
+		<a href="https://conservancy.umn.edu/handle/11299/37076">Residuals and Influence in Regression</a>
+		<p>R. Dennis Cook and Sanford Weisberg.</p>
+		<p>ISBN 041224280X. 1982.</p>
+		</li>
+	<li>
+		<a href="https://www.jstor.org/stable/1268249">Detection of Influential Observations in Linear Regression</a>
+		<p>R. Dennis Cook.</p>
+		<p>Technometrics, 1977.</p>
+	</li>
+	<li>
+		<a href="https://www.jstor.org/stable/1268249">On the Uniqueness of the Shapley Value</a>
+		<p>Pradeep Dubey.</p>
+		<p>International Journal of Game Theory, 1975.</p>
+	</li>
+	<li>
+		<a href="https://www.rand.org/pubs/papers/P295.html">A Value for n-Person Games</a>
+		<p>Lloyd S. Shapley.</p>
+		<p>Contributions to the Theory of Games II, 1953.</p>
+		</li>
+	
+  </ol>
+    
+  
+<h3 class="ex2"><b> Gradient-Based Estimators: </b></h3>
+
+  <ol class="ex1">
+	<li>
+		<a href="https://arxiv.org/abs/2308.03296">Studying Large Language Model Generalization with Influence Functions</a>
+		<p>Roger Grosse, Juhan Bae, Cem Anil, Nelson Elhage, Alex Tamkin, Amirhossein Tajdini, Benoit Steiner, Dustin Li, Esin Durmus, Ethan Perez, Evan Hubinger, Kamilė Lukošiūtė, Karina Nguyen, Nicholas Joseph, Sam McCandlish, Jared Kaplan, and Samuel R. Bowman.</p>
+		<p>2023.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2305.20002">Representer Point Selection for Explaining Regularized High-dimensional Models</a>
+		<p>Che-Ping Tsai, Jiong Zhang, Eli Chien, Hsiang-Fu Yu, Cho-Jui Hsieh, and Pradeep Ravikumar.</p>
+		<p>ICML, 2023.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2305.16971">Theoretical and Practical Perspectives on what Influence Functions Do</a>
+		<p>Andrea Schioppa, Katja Filippova, Ivan Titov, and Polina Zablotskaia.</p>
+		<p>2023.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2303.14186">TRAK: Attributing Model Behavior at Scale</a>
+		<p>Sung Min Park, Kristian Georgiev, Andrew Ilyas, Guillaume Leclerc, and Aleksander Madry.</p>
+		<p>ICML, 2023.</p>
+		</li>
+	<li>
+		<a href="https://arxiv.org/abs/2201.10055">Identifying a Training-Set Attack’s Target Using Renormalized Influence Estimation</a>
+		<p>Zayd Hammoudeh and Daniel Lowd.</p>
+		<p>CCS, 2022.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2012.01685">Cross-Loss Influence Functions to Explain Deep Network Representations</a>
+		<p>Andrew Silva, Rohit Chopra, and Matthew Gombolay.</p>
+		<p>AISTATS, 2022.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2209.05364">If Influence Functions are the Answer, Then What is the Question?</a>
+		<p>Juhan Bae, Nathan Ng, Alston Lo, Marzyeh Ghassemi, and Roger Grosse.</p>
+		<p>2022.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2202.11844">First is Better Than Last for Training Data Influence</a>
+		<p>Chih-Kuan Yeh, Ankur Taly, Mukund Sundararajan, Frederick Liu, and Pradeep Ravikumar.</p>
+		<p>NeurIPS, 2022.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2210.14177">Influence Functions for Sequence Tagging Models</a>
+		<p>Sarthak Jain, Varun Manjunatha, Byron C. Wallace, Ani Nenkova.</p>
+		<p>Findings of EMNLP, 2022.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2112.03052">Scaling Up Influence Functions</a>
+		<p>Andrea Schioppa, Polina Zablotskaia, David Vilar Torres, and Artem Sokolov.</p>
+		<p>AAAI, 2022.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2112.08297">Rethinking Influence Functions of Neural Networks in the Over-Parameterized Regime</a>
+		<p>Rui Zhang and Shihua Zhang.</p>
+		<p>AAAI, 2022.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2205.01362">TracInAD: Measuring Influence for Anomaly Detection</a>
+		<p>Hugo Thimonier, Fabrice Popineau, Arpad Rimmel, Bich-Liˆen Doan, and Fabrice Daniel.</p>
+		<p>IJCNN, 2021.</p>
+	</li>
+	<li>
+		<a href="https://openreview.net/forum?id=xHKVVHGDOEk">Influence Functions in Deep Learning Are Fragile</a>
+		<p>Samyadeep Basu, Phil Pope, and Soheil Feizi.</p>
+		<p>ICLR, 2021.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2102.02515">HyDRA: Hypergradient Data Relevance Analysis for Interpreting Deep Neural Networks</a>
+		<p>Yuanyuan Chen, Boyang Li, Han Yu, Pengcheng Wu, and Chunyan Miao.</p>
+		<p>AAAI, 2021.</p>
+	</li>
+	<li>
+		<a href="https://openreview.net/forum?id=PlGSgjFK2oJ">On Memorization in Probabilistic Deep Generative Models</a>
+		<p>Gerrit J. J. van den Burg and Christopher K. I. Williams.</p>
+		<p>NeurIPS, 2021.</p>
+	</li>
+	<li>
+		<a href="https://openreview.net/forum?id=a5-37ER8qTI">Understanding Instance-based Interpretability of Variational Auto-Encoders</a>
+		<p>Zhifeng Kong and Kamalika Chaudhuri.</p>
+		<p>NeurIPS, 2021.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2012.15781">FastIF: Scalable Influence Functions for Efficient Model Interpretation and Debugging</a>
+		<p>Han Guo, Nazneen Fatema Rajani, Peter Hase, Mohit Bansal, and Caiming Xiong.</p>
+		<p>EMNLP, 2021.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2101.08367">Influence Estimation for Generative Adversarial Networks</a>
+		<p>Naoyuki Terashita, Hiroki Ohashi, Yuichi Nonaka, and Takashi Kanemaru.</p>
+		<p>ICLR, 2021.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2111.04683">Revisiting Methods for Finding Influential Examples</a>
+		<p>Karthikeyan K and Anders Sogaard.</p>
+		<p>2021.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2104.13794">Finding High-Value Training Data Subset through Differentiable Convex Programming</a>
+		<p>Soumi Das, Arshdeep Singh, Saptarshi Chatterjee, Suparna Bhattacharya, and Sourangshu Bhattacharya.</p>
+		<p>ECML-PKDD, 2021.</p>
+	</li>
+	<li>
+		<a href="https://openreview.net/forum?id=Wl32WBZnSP4">Representer Point Selection via Local Jacobian Expansion for Post-hoc Classifier Explanation of Deep Neural Networks and Ensemble Models</a>
+		<p>Yi Sui, Ga Wu, and Scott Sanner.</p>
+		<p>NeurIPS, 2021.</p>
+	</li>
+	<li>
+		<a href="http://www.gatsby.ucl.ac.uk/~balaji/udl2021/accepted-papers/UDL2021-paper-029.pdf">Simple, Attack-Agnostic Defense Against Targeted Training Set Attacks Using Cosine Similarity</a>
+		<p>Zayd Hammoudeh and Daniel Lowd.</p>
+		<p>UDL, 2021.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2002.08484">Estimating Training Data Influence by Tracing Gradient Descent</a>
+		<p>Garima Pruthi, Frederick Liu, Satyen Kale, and Mukund Sundararajan.</p>
+		<p>NeurIPS, 2020.</p>
+	</li>
+	<li>
+		<a href="http://proceedings.mlr.press/v108/barshan20a/barshan20a.pdf">RelatIF: Identifying Explanatory Training Samples via Relative Influence</a>
+		<p>Elnaz Barshan, Marc-Etienne Brunet, and Gintare Karolina Dziugaite.</p>
+		<p>AISTATS, 2020.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1911.00418">On Second-Order Group Influence Functions for Black-Box Predictions</a>
+		<p>Samyadeep Basu, Xuchen You, and Soheil Feizi.</p>
+		<p>ICML, 2020.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2012.04207">Efficient Estimation of Influence of a Training Instance</a>
+		<p>Sosuke Kobayashi, Sho Yokoi, Jun Suzuki, and Kentaro Inui.</p>
+		<p>SustaiNLP, 2020.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1905.13289">On the Accuracy of Influence Functions for Measuring Group Effects</a>
+		<p>Pang Wei Koh, Kai-Siang Ang, Hubert H. K. Teo, and Percy Liang.</p>
+		<p>NeurIPS, 2019.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1906.08473">Data Cleansing for Models Trained with SGD</a>
+		<p>Satoshi Hara, Atsushi Nitanda, and Takanori Maehara.</p>
+		<p>NeurIPS, 2019.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1811.09720">Representer Point Selection for Explaining Deep Neural Networks</a>
+		<p>Chih-Kuan Yeh, Joon Sik Kim, Ian E.H. Yen, and Pradeep Ravikumar.</p>
+		<p>NeurIPS, 2018.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1703.04730">Understanding Black-box Predictions via Influence Functions</a>
+		<p>Pang Wei Koh and Percy Liang.</p>
+		<p>ICML, 2017.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1706.05394">A Closer Look at Memorization in Deep Networks</a>
+		<p>Devansh Arpit, Stanislaw Jastrzebski, Nicolas Ballas, David Krueger, Emmanuel Bengio, Maxinder S. Kanwal, Tegan Maharaj, Asja Fischer, Aaron Courville, Yoshua Bengio, and Simon Lacoste-Julien.</p>
+		<p>ICML, 2017.</p>
+	</li>
+	<li>
+		<a href="https://www.jstor.org/stable/2285666">The Influence Curve and its Role in Robust Estimation</a>
+		<p>Frank R. Hampel.</p>
+		<p>Journal of the American Statistical Association, 1974.</p>
+	</li>
+	<li>
+		<a href="https://faculty.washington.edu/fscholz/Reports/InfinitesimalJackknife.pdf">The Infinitesimal Jackknife</a>
+		<p>Louis A. Jaeckel.</p>
+		<p>1972.</p>
+	</li>	
+
+  </ol>
+
+<h3 class="ex2"><b> Non-Parametric Methods: </b></h3>
+
+  <ol class="ex1">
+	<li>
+		<a href="https://arxiv.org/abs/2205.00359">
+			Adapting and Evaluating Influence-Estimation Methods for Gradient-Boosted Decision Trees
+		</a>
+		<p>Jonathan Brophy, Zayd Hammoudeh, and Daniel Lowd</p>
+		<p>JMLR, 2023</p>
+	</li>
+	<li>
+		<a href="http://www.vldb.org/pvldb/vol12/p1610-jia.pdf">
+			Efficient Task-Specific Data Valuation for Nearest Neighbor Algorithms
+		</a>
+		<p>Ruoxi Jia, David Dao, Boxin Wang, Frances Ann Hubis, Nezihe Merve Gurel, Bo Li, Ce Zhang, Costas J. Spanos, and Dawn Song</p>
+		<p>PVLDB, 2019</p>
+		<p>technical note</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1802.06640">
+			Finding Influential Training Samples for Gradient Boosted Decision Trees
+		</a>
+		<p>Boris Sharchilev, Yury Ustinovskiy, Pavel Serdyukov, and Maarten de Rijke</p>
+		<p>ICML, 2018</p>
+	</li>
+
+  </ol>
+
+<h3 class="ex2"><b> Influence Analysis-Group Effects: </b></h3>
+<ol class="ex1">
+	<li>
+		<a href="https://proceedings.neurips.cc/paper/2019/hash/a78482ce76496fcf49085f2190e675b4-Abstract.html">
+			On the accuracy of influence functions for measuring group effects
+		</a>
+		<p>Koh, Pang Wei W., Kai-Siang Ang, Hubert Teo, and Percy S. Liang.</p>
+		<p>Advances in neural information processing systems* 32 (2019).</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1911.00418">
+			On Second-Order Group Influence Functions for Black-Box Predictions
+		</a>
+		<p>Samyadeep Basu, Xuchen You, and Soheil Feizi. </p>
+			<p>In: Proceedings of the 37th International Conference on Machine
+			Learning. ICML'20. Virtual Only: PMLR, 2020.</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2201.10055">
+			Identifying a Training-Set Attack's Target Using Renormalized Influence Estimation
+		</a>
+		<p>Zayd Hammoudeh and Daniel Lowd.</p>
+		<p>In: Proceedings of the 29th ACM SIGSAC Conference on Computer and Communications Security. CCS'22. Los Angeles, CA: Association for Computing
+			Machinery, 2022.</p>
+	</li>
+  </ol>
+<h3 class="ex2"><b> Applications of Influence Analysis: </b></h3>
+
+  <ol class="ex2">
+<h4 style="text-indent: -20px;"><b> Active Learning </b></h4>
+	<li>
+		<a href="https://arxiv.org/abs/2108.09331">
+			Influence Selection for Active Learning
+		</a>
+		<p>Zhuoming Liu, Hao Ding, Huaping Zhong, Weijia Li, Jifeng Dai, and Conghui He</p>
+		<p>ICCV, 2021</p>
+	</li>
+	<li>
+		<a href="https://openreview.net/forum?id=CEkbBN_-Ja8">
+			RIM: Reliable Influence-based Active Learning on Graphs
+		</a>
+		<p>Wentao Zhang, Yexin Wang, Zhenbang You, Meng Cao, Ping Huang, Jiulong Shan, Zhi Yang, and Bin Cui</p>
+		<p>NeurIPS, 2021</p>
+	</li>
+<h4 style="text-indent: -20px;"><b> Adversarial Attacks </b></h4>
+	<li>
+		<a href="https://arxiv.org/abs/2205.13680">
+			Membership Inference Attack Using Self Influence Functions
+		</a>
+		<p>Gilad Cohen and Raja Giryes</p>
+		<p>2022</p>
+		<p>code</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/2002.08025">
+			Influence Function based Data Poisoning Attacks to Top-N Recommender Systems
+		</a>
+		<p>Minghong Fang, Neil Zhenqiang Gong, and Jia Liu</p>
+		<p>WWW, 2020</p>
+	</li>
+<h4 style="text-indent: -20px;"><b> Adversarial Defenses </b></h4>
+<li>
+    <a href="https://arxiv.org/abs/2201.10055">
+        Identifying a Training-Set Attack's Target Using Renormalized Influence Estimation
+    </a>
+    <p>Zayd Hammoudeh and Daniel Lowd</p>
+    <p>CCS, 2022</p>
+</li>
+<li>
+    <a href="https://arxiv.org/abs/1909.06872">
+        Detecting Adversarial Samples Using Influence Functions and Nearest Neighbors
+    </a>
+    <p>Gilad Cohen, Guillermo Sapiro, and Raja Giryes</p>
+    <p>CVPR, 2020</p>
+</li>
+<h4 style="text-indent: -20px;"><b> Data Augmentation </b></h4>
+<li>
+    <a href="https://arxiv.org/pdf/2108.10248.pdf">
+        Influence-guided Data Augmentation for Neural Tensor Completion
+    </a>
+    <p>Sejoon Oh, Sungchul Kim, Ryan A. Rossi, and Srijan Kumar</p>
+    <p>CIKM, 2021</p>
+    <p>code</p>
+</li>
+<li>
+    <a href="https://ieeexplore.ieee.org/document/9156698">
+        Learning Augmentation Network via Influence Functions
+    </a>
+    <p>Donghoon Lee, Hyunsin Park, Trung Pham, and Chang D. Yoo</p>
+    <p>CVPR, 2020</p>
+    <p>video</p>
+</li>
+<h4 style="text-indent: -20px;"><b> Data Cleaning </b></h4>
+<li>
+    <a href="https://openreview.net/forum?id=EskfH0bwNVn">
+        Resolving Training Biases via Influence-based Data Relabeling
+    </a>
+    <p>Shuming Kong, Yanyan Shen, and Linpeng Huang</p>
+    <p>ICLR, 2022</p>
+    <p>code</p>
+    <p>video</p>
+</li>
+<li>
+    <a href="https://ieeexplore.ieee.org/document/9761479">
+        Influence Based Re-Weighing for Labeling Noise in Medical Imaging
+    </a>
+    <p>Joschka Braun, Micha Kornreich, JinHyeong Park, Jayashri Pawar, James Browning, Richard Herzog, Benjamin Odry, and Li Zhang</p>
+    <p>ISBI, 2022</p>
+</li>
+<li>
+    <a href="https://arxiv.org/abs/2010.03154">
+        Fortifying Toxic Speech Detectors Against Veiled Toxicity
+    </a>
+    <p>Xiaochuang Han and Yulia Tsvetkov</p>
+    <p>EMNLP, 2020</p>
+    <p>code</p>
+    <p>video</p>
+</li>
+<h4 style="text-indent: -20px;"><b> Fairness and Explainability </b></h4>
+<li>
+    <a href="https://arxiv.org/abs/2202.00787">
+        Achieving Fairness at No Utility Cost via Data Reweighing with Influence
+    </a>
+    <p>Peizhao Li and Hongfu Liu</p>
+    <p>ICML, 2022</p>
+</li>
+<li>
+    <a href="https://arxiv.org/abs/2104.04128">
+        An Empirical Comparison of Instance Attribution Methods for NLP
+    </a>
+    <p>Pouya Pezeshkpour, Sarthak Jain, Byron C. Wallace, and Sameer Singh</p>
+    <p>NAACL, 2021</p>
+</li>
+<li>
+    <a href="https://arxiv.org/abs/2107.10171">
+        Leave-One-Out Unfairness
+    </a>
+    <p>Emily Black and Matt Fredrikson</p>
+    <p>FAccT, 2021</p>
+</li>
+<li>
+    <a href="https://arxiv.org/abs/1908.08474">
+        The Many Shapley Values for Model Explanation
+    </a>
+    <p>Mukund Sundararajan and Amir Najmi</p>
+    <p>ICML, 2020</p>
+</li>
+<li>
+    <a href="http://proceedings.mlr.press/v108/barshan20a/barshan20a.pdf">
+        RelatIF: Identifying Explanatory Training Samples via Relative Influence
+    </a>
+    <p>Elnaz Barshan, Marc-Etienne Brunet, and Gintare Karolina Dziugaite</p>
+    <p>AISTATS, 2020</p>
+</li>
+<h4 style="text-indent: -20px;"><b> Subsampling </b></h4>
+	<li>
+		<a href="https://arxiv.org/abs/1912.01321">
+			Less Is Better: Unweighted Data Subsampling via Influence Function
+		</a>
+		<p>Zifeng Wang, Hong Zhu, Zhenhua Dong, Xiuqiang He, and Shao-Lun Huang</p>
+		<p>AAAI, 2020</p>
+	</li>
+	<li>
+		<a href="https://arxiv.org/abs/1709.01716">
+			Optimal Subsampling with Influence Functions
+		</a>
+		<p>Daniel Ting and Eric Brochu</p>
+		<p>NeurIPS, 2018</p>
+	</li>
+  </ol>
+</body>
+</html>
